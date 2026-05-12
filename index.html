@@ -3,16 +3,386 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Daalman Metselwerken</title>
-  <meta name="description" content="Daalman Metselwerken — vakkundig metselwerk voor particulieren en bedrijven." />
+  <title>Daalman Metselwerken — Vakkundig metselwerk in Hillegom en omstreken</title>
+  <meta name="description" content="Daalman Metselwerken uit Hillegom: vakkundig metselwerk, voegwerk en renovatie voor particulieren en bedrijven in de Bollenstreek." />
+  <meta property="og:title" content="Daalman Metselwerken" />
+  <meta property="og:description" content="Vakkundig metselwerk in Hillegom en omstreken." />
+  <meta property="og:type" content="website" />
   <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            brick: {
+              50:  '#fbf6f2',
+              100: '#f3e5d8',
+              200: '#e6c9ad',
+              300: '#d4a47c',
+              400: '#b97a4c',
+              500: '#9c5a33',
+              600: '#7e4326',
+              700: '#5d301c',
+              800: '#3f2014',
+              900: '#26140c',
+            }
+          },
+          fontFamily: {
+            sans: ['Inter', 'system-ui', 'sans-serif'],
+            display: ['"Playfair Display"', 'serif'],
+          }
+        }
+      }
+    }
+  </script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet">
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "LocalBusiness",
+    "name": "Daalman Metselwerken",
+    "image": "",
+    "telephone": "+31620206038",
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "Pieter van Eyckheem 51",
+      "postalCode": "2182 ZV",
+      "addressLocality": "Hillegom",
+      "addressCountry": "NL"
+    },
+    "areaServed": ["Hillegom", "Lisse", "Bollenstreek", "Haarlem", "Leiden"]
+  }
+  </script>
 </head>
-<body class="bg-stone-50 text-stone-900">
-  <main class="min-h-screen flex items-center justify-center px-6">
-    <div class="text-center">
-      <h1 class="text-4xl font-bold mb-4">Daalman Metselwerken</h1>
-      <p class="text-stone-600">Website in ontwikkeling.</p>
+<body class="font-sans bg-stone-50 text-stone-900 antialiased">
+
+  <header class="absolute top-0 left-0 right-0 z-20">
+    <div class="max-w-7xl mx-auto px-6 py-5 flex items-center justify-between">
+      <a href="#" class="flex items-center gap-2 text-white">
+        <span class="font-display text-2xl font-bold tracking-tight">Daalman</span>
+        <span class="text-sm uppercase tracking-widest opacity-80">Metselwerken</span>
+      </a>
+      <nav class="hidden md:flex items-center gap-8 text-white text-sm font-medium">
+        <a href="#diensten" class="hover:text-brick-200 transition">Diensten</a>
+        <a href="#werkwijze" class="hover:text-brick-200 transition">Werkwijze</a>
+        <a href="#werkgebied" class="hover:text-brick-200 transition">Werkgebied</a>
+        <a href="#contact" class="hover:text-brick-200 transition">Contact</a>
+      </nav>
+      <a href="tel:+31620206038" class="hidden md:inline-flex items-center gap-2 bg-brick-500 hover:bg-brick-600 text-white px-4 py-2 rounded-md text-sm font-semibold transition">
+        <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h2.28a2 2 0 011.94 1.515l.7 2.8a2 2 0 01-.45 1.95l-1.27 1.27a11 11 0 005.27 5.27l1.27-1.27a2 2 0 011.95-.45l2.8.7A2 2 0 0121 16.72V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"/></svg>
+        06 20 20 60 38
+      </a>
+      <button id="menu-toggle" class="md:hidden text-white" aria-label="Menu openen">
+        <svg class="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/></svg>
+      </button>
     </div>
-  </main>
+    <div id="mobile-menu" class="hidden md:hidden bg-stone-900/95 backdrop-blur">
+      <nav class="px-6 py-4 flex flex-col gap-4 text-white">
+        <a href="#diensten" class="hover:text-brick-200">Diensten</a>
+        <a href="#werkwijze" class="hover:text-brick-200">Werkwijze</a>
+        <a href="#werkgebied" class="hover:text-brick-200">Werkgebied</a>
+        <a href="#contact" class="hover:text-brick-200">Contact</a>
+        <a href="tel:+31620206038" class="bg-brick-500 text-white px-4 py-2 rounded-md text-sm font-semibold text-center mt-2">Bel 06 20 20 60 38</a>
+      </nav>
+    </div>
+  </header>
+
+  <section class="relative min-h-[90vh] flex items-center text-white overflow-hidden">
+    <div class="absolute inset-0 z-0">
+      <img src="https://images.unsplash.com/photo-1635424239131-32dc44986b56?auto=format&fit=crop&w=2000&q=80" alt="Vakkundig metselwerk" class="w-full h-full object-cover" />
+      <div class="absolute inset-0 bg-gradient-to-b from-stone-900/80 via-stone-900/60 to-stone-900/80"></div>
+    </div>
+    <div class="relative z-10 max-w-7xl mx-auto px-6 py-32 w-full">
+      <div class="max-w-3xl">
+        <p class="uppercase tracking-[0.3em] text-brick-300 text-sm font-semibold mb-6">Metselwerk uit Hillegom</p>
+        <h1 class="font-display text-5xl md:text-7xl font-bold leading-tight mb-6">Vakwerk dat blijft staan.</h1>
+        <p class="text-lg md:text-xl text-stone-200 mb-10 max-w-2xl leading-relaxed">
+          Daalman Metselwerken levert vakkundig metselwerk, voegwerk en renovatie voor particulieren en bedrijven in de Bollenstreek en omgeving. Eerlijk werk, strakke afwerking, gemaakt om generaties mee te gaan.
+        </p>
+        <div class="flex flex-col sm:flex-row gap-4">
+          <a href="#contact" class="inline-flex items-center justify-center gap-2 bg-brick-500 hover:bg-brick-600 text-white px-7 py-4 rounded-md font-semibold transition">
+            Vraag een offerte aan
+            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"/></svg>
+          </a>
+          <a href="tel:+31620206038" class="inline-flex items-center justify-center gap-2 bg-white/10 hover:bg-white/20 backdrop-blur border border-white/20 text-white px-7 py-4 rounded-md font-semibold transition">
+            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h2.28a2 2 0 011.94 1.515l.7 2.8a2 2 0 01-.45 1.95l-1.27 1.27a11 11 0 005.27 5.27l1.27-1.27a2 2 0 011.95-.45l2.8.7A2 2 0 0121 16.72V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"/></svg>
+            06 20 20 60 38
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="bg-white border-y border-stone-200">
+    <div class="max-w-7xl mx-auto px-6 py-8 grid grid-cols-2 md:grid-cols-4 gap-6 text-center">
+      <div>
+        <div class="font-display text-3xl font-bold text-brick-600">25+</div>
+        <div class="text-sm text-stone-600 mt-1">Jaar ervaring</div>
+      </div>
+      <div>
+        <div class="font-display text-3xl font-bold text-brick-600">500+</div>
+        <div class="text-sm text-stone-600 mt-1">Projecten opgeleverd</div>
+      </div>
+      <div>
+        <div class="font-display text-3xl font-bold text-brick-600">100%</div>
+        <div class="text-sm text-stone-600 mt-1">Vast aanspreekpunt</div>
+      </div>
+      <div>
+        <div class="font-display text-3xl font-bold text-brick-600">Bollen-<br>streek</div>
+        <div class="text-sm text-stone-600 mt-1">Werkgebied</div>
+      </div>
+    </div>
+  </section>
+
+  <section id="diensten" class="py-24 bg-stone-50">
+    <div class="max-w-7xl mx-auto px-6">
+      <div class="max-w-2xl mb-16">
+        <p class="uppercase tracking-[0.3em] text-brick-600 text-sm font-semibold mb-4">Diensten</p>
+        <h2 class="font-display text-4xl md:text-5xl font-bold mb-6">Alles op het gebied van metselwerk.</h2>
+        <p class="text-stone-600 text-lg leading-relaxed">
+          Van een nieuwe tuinmuur tot complete gevelrenovatie — bij Daalman Metselwerken bent u verzekerd van vakwerk en een eerlijke prijs.
+        </p>
+      </div>
+
+      <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+        <div class="bg-white p-8 rounded-lg border border-stone-200 hover:border-brick-300 hover:shadow-lg transition">
+          <div class="w-12 h-12 bg-brick-100 rounded-lg flex items-center justify-center mb-5">
+            <svg class="w-6 h-6 text-brick-600" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 21h18M3 10h18M5 6l7-3 7 3M4 10v11m16-11v11M8 14v3m4-3v3m4-3v3"/></svg>
+          </div>
+          <h3 class="font-display text-xl font-bold mb-3">Nieuwbouw metselwerk</h3>
+          <p class="text-stone-600 leading-relaxed">Strak en duurzaam metselwerk voor woningen, aanbouwen en bedrijfspanden. Volgens bestek of in overleg.</p>
+        </div>
+
+        <div class="bg-white p-8 rounded-lg border border-stone-200 hover:border-brick-300 hover:shadow-lg transition">
+          <div class="w-12 h-12 bg-brick-100 rounded-lg flex items-center justify-center mb-5">
+            <svg class="w-6 h-6 text-brick-600" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M11 5.882V19.24a1.76 1.76 0 01-3.417.592l-2.147-6.15M18 13a3 3 0 100-6M5.436 13.683A4.001 4.001 0 017 6h1.832c4.1 0 7.625-1.234 9.168-3v14c-1.543-1.766-5.067-3-9.168-3H7a3.988 3.988 0 01-1.564-.317z"/></svg>
+          </div>
+          <h3 class="font-display text-xl font-bold mb-3">Voegwerk & hervoegen</h3>
+          <p class="text-stone-600 leading-relaxed">Vervangen van slecht voegwerk, uithakken en opnieuw voegen — uw gevel ziet er weer als nieuw uit.</p>
+        </div>
+
+        <div class="bg-white p-8 rounded-lg border border-stone-200 hover:border-brick-300 hover:shadow-lg transition">
+          <div class="w-12 h-12 bg-brick-100 rounded-lg flex items-center justify-center mb-5">
+            <svg class="w-6 h-6 text-brick-600" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6"/></svg>
+          </div>
+          <h3 class="font-display text-xl font-bold mb-3">Renovatie & herstel</h3>
+          <p class="text-stone-600 leading-relaxed">Herstel van scheuren, verzakkingen en beschadigd metselwerk. Karakter behouden, kwaliteit terug.</p>
+        </div>
+
+        <div class="bg-white p-8 rounded-lg border border-stone-200 hover:border-brick-300 hover:shadow-lg transition">
+          <div class="w-12 h-12 bg-brick-100 rounded-lg flex items-center justify-center mb-5">
+            <svg class="w-6 h-6 text-brick-600" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 18.657A8 8 0 016.343 7.343S7 9 9 10c0-2 .5-5 2.986-7C14 5 16.09 5.24 17 7.434c1.149 2.773.5 4.566 1 6.193.96-.95 1.658-2.038 2-3.627 1 1.5 1.999 4.547 1.999 6 0 .82-.13 1.589-.382 2.302"/></svg>
+          </div>
+          <h3 class="font-display text-xl font-bold mb-3">Schoorsteenherstel</h3>
+          <p class="text-stone-600 leading-relaxed">Restauratie, opnieuw opmetselen of waterdicht maken van uw schoorsteen — veilig en duurzaam.</p>
+        </div>
+
+        <div class="bg-white p-8 rounded-lg border border-stone-200 hover:border-brick-300 hover:shadow-lg transition">
+          <div class="w-12 h-12 bg-brick-100 rounded-lg flex items-center justify-center mb-5">
+            <svg class="w-6 h-6 text-brick-600" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 10h16M4 14h16M4 18h16"/></svg>
+          </div>
+          <h3 class="font-display text-xl font-bold mb-3">Tuinmuren & erfafscheiding</h3>
+          <p class="text-stone-600 leading-relaxed">Stevige, fraai afgewerkte tuinmuren en sierwerk — perfect voor uw tuin of oprit.</p>
+        </div>
+
+        <div class="bg-white p-8 rounded-lg border border-stone-200 hover:border-brick-300 hover:shadow-lg transition">
+          <div class="w-12 h-12 bg-brick-100 rounded-lg flex items-center justify-center mb-5">
+            <svg class="w-6 h-6 text-brick-600" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"/></svg>
+          </div>
+          <h3 class="font-display text-xl font-bold mb-3">Advies & inspectie</h3>
+          <p class="text-stone-600 leading-relaxed">Vrijblijvende inspectie van uw metselwerk. Eerlijk advies, geen verkooppraat.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="werkwijze" class="py-24 bg-stone-900 text-white">
+    <div class="max-w-7xl mx-auto px-6">
+      <div class="grid lg:grid-cols-2 gap-16 items-center">
+        <div>
+          <p class="uppercase tracking-[0.3em] text-brick-300 text-sm font-semibold mb-4">Werkwijze</p>
+          <h2 class="font-display text-4xl md:text-5xl font-bold mb-6">Helder, eerlijk en zonder verrassingen.</h2>
+          <p class="text-stone-300 text-lg leading-relaxed mb-8">
+            U heeft altijd één vast aanspreekpunt. Geen tussenpersonen, geen verborgen kosten — gewoon vakwerk met een handdruk.
+          </p>
+          <a href="#contact" class="inline-flex items-center gap-2 text-brick-300 hover:text-brick-200 font-semibold">
+            Plan een vrijblijvend gesprek
+            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"/></svg>
+          </a>
+        </div>
+        <div class="space-y-6">
+          <div class="flex gap-5">
+            <div class="flex-shrink-0 w-12 h-12 bg-brick-500 rounded-full flex items-center justify-center font-display font-bold text-lg">1</div>
+            <div>
+              <h3 class="font-bold text-lg mb-1">Kennismaking & inspectie</h3>
+              <p class="text-stone-400 leading-relaxed">We komen langs, bekijken de klus en bespreken uw wensen.</p>
+            </div>
+          </div>
+          <div class="flex gap-5">
+            <div class="flex-shrink-0 w-12 h-12 bg-brick-500 rounded-full flex items-center justify-center font-display font-bold text-lg">2</div>
+            <div>
+              <h3 class="font-bold text-lg mb-1">Heldere offerte</h3>
+              <p class="text-stone-400 leading-relaxed">Binnen enkele dagen ontvangt u een duidelijke offerte op maat.</p>
+            </div>
+          </div>
+          <div class="flex gap-5">
+            <div class="flex-shrink-0 w-12 h-12 bg-brick-500 rounded-full flex items-center justify-center font-display font-bold text-lg">3</div>
+            <div>
+              <h3 class="font-bold text-lg mb-1">Vakkundige uitvoering</h3>
+              <p class="text-stone-400 leading-relaxed">We plannen het werk in en voeren het netjes en op tijd uit.</p>
+            </div>
+          </div>
+          <div class="flex gap-5">
+            <div class="flex-shrink-0 w-12 h-12 bg-brick-500 rounded-full flex items-center justify-center font-display font-bold text-lg">4</div>
+            <div>
+              <h3 class="font-bold text-lg mb-1">Oplevering & garantie</h3>
+              <p class="text-stone-400 leading-relaxed">U bent pas tevreden als het strak is. Daar staan we voor in.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="werkgebied" class="py-24 bg-stone-50">
+    <div class="max-w-7xl mx-auto px-6 grid lg:grid-cols-2 gap-16 items-center">
+      <div>
+        <p class="uppercase tracking-[0.3em] text-brick-600 text-sm font-semibold mb-4">Werkgebied</p>
+        <h2 class="font-display text-4xl md:text-5xl font-bold mb-6">Actief in de Bollenstreek en omgeving.</h2>
+        <p class="text-stone-600 text-lg leading-relaxed mb-8">
+          Vanuit Hillegom werken we in de hele regio. Twijfelt u of uw locatie binnen ons werkgebied valt? Neem gerust contact op.
+        </p>
+        <ul class="grid grid-cols-2 gap-3 text-stone-700">
+          <li class="flex items-center gap-2"><span class="w-1.5 h-1.5 bg-brick-500 rounded-full"></span>Hillegom</li>
+          <li class="flex items-center gap-2"><span class="w-1.5 h-1.5 bg-brick-500 rounded-full"></span>Lisse</li>
+          <li class="flex items-center gap-2"><span class="w-1.5 h-1.5 bg-brick-500 rounded-full"></span>Sassenheim</li>
+          <li class="flex items-center gap-2"><span class="w-1.5 h-1.5 bg-brick-500 rounded-full"></span>Noordwijk</li>
+          <li class="flex items-center gap-2"><span class="w-1.5 h-1.5 bg-brick-500 rounded-full"></span>Haarlem</li>
+          <li class="flex items-center gap-2"><span class="w-1.5 h-1.5 bg-brick-500 rounded-full"></span>Leiden</li>
+          <li class="flex items-center gap-2"><span class="w-1.5 h-1.5 bg-brick-500 rounded-full"></span>Heemstede</li>
+          <li class="flex items-center gap-2"><span class="w-1.5 h-1.5 bg-brick-500 rounded-full"></span>Voorhout</li>
+        </ul>
+      </div>
+      <div class="rounded-lg overflow-hidden shadow-xl border border-stone-200">
+        <iframe
+          src="https://www.openstreetmap.org/export/embed.html?bbox=4.55%2C52.25%2C4.70%2C52.35&amp;layer=mapnik&amp;marker=52.297%2C4.581"
+          class="w-full h-96"
+          loading="lazy"
+          title="Werkgebied Daalman Metselwerken"></iframe>
+      </div>
+    </div>
+  </section>
+
+  <section id="contact" class="py-24 bg-white">
+    <div class="max-w-7xl mx-auto px-6">
+      <div class="grid lg:grid-cols-2 gap-16">
+        <div>
+          <p class="uppercase tracking-[0.3em] text-brick-600 text-sm font-semibold mb-4">Contact</p>
+          <h2 class="font-display text-4xl md:text-5xl font-bold mb-6">Vraag vrijblijvend een offerte aan.</h2>
+          <p class="text-stone-600 text-lg leading-relaxed mb-10">
+            Bel, mail of stuur een berichtje. We nemen meestal binnen één werkdag contact op.
+          </p>
+
+          <div class="space-y-5">
+            <a href="tel:+31620206038" class="flex items-start gap-4 group">
+              <div class="w-12 h-12 bg-brick-100 group-hover:bg-brick-500 rounded-lg flex items-center justify-center flex-shrink-0 transition">
+                <svg class="w-5 h-5 text-brick-600 group-hover:text-white transition" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h2.28a2 2 0 011.94 1.515l.7 2.8a2 2 0 01-.45 1.95l-1.27 1.27a11 11 0 005.27 5.27l1.27-1.27a2 2 0 011.95-.45l2.8.7A2 2 0 0121 16.72V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"/></svg>
+              </div>
+              <div>
+                <div class="text-sm text-stone-500">Telefoon</div>
+                <div class="font-semibold text-lg">06 20 20 60 38</div>
+              </div>
+            </a>
+
+            <div class="flex items-start gap-4">
+              <div class="w-12 h-12 bg-brick-100 rounded-lg flex items-center justify-center flex-shrink-0">
+                <svg class="w-5 h-5 text-brick-600" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"/><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"/></svg>
+              </div>
+              <div>
+                <div class="text-sm text-stone-500">Adres</div>
+                <div class="font-semibold text-lg">Pieter van Eyckheem 51</div>
+                <div class="text-stone-600">2182 ZV Hillegom</div>
+              </div>
+            </div>
+
+            <div class="flex items-start gap-4">
+              <div class="w-12 h-12 bg-brick-100 rounded-lg flex items-center justify-center flex-shrink-0">
+                <svg class="w-5 h-5 text-brick-600" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
+              </div>
+              <div>
+                <div class="text-sm text-stone-500">Bereikbaarheid</div>
+                <div class="font-semibold text-lg">Ma — vr · 07:00 — 18:00</div>
+                <div class="text-stone-600">Zaterdag op afspraak</div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="bg-stone-50 p-8 rounded-lg border border-stone-200">
+          <form class="space-y-5" onsubmit="event.preventDefault(); alert('Bedankt voor uw bericht. We nemen zo snel mogelijk contact op.');">
+            <div>
+              <label for="name" class="block text-sm font-semibold text-stone-700 mb-2">Naam</label>
+              <input type="text" id="name" name="name" required class="w-full px-4 py-3 rounded-md border border-stone-300 focus:border-brick-500 focus:ring-2 focus:ring-brick-200 outline-none transition" />
+            </div>
+            <div class="grid sm:grid-cols-2 gap-5">
+              <div>
+                <label for="email" class="block text-sm font-semibold text-stone-700 mb-2">E-mail</label>
+                <input type="email" id="email" name="email" required class="w-full px-4 py-3 rounded-md border border-stone-300 focus:border-brick-500 focus:ring-2 focus:ring-brick-200 outline-none transition" />
+              </div>
+              <div>
+                <label for="phone" class="block text-sm font-semibold text-stone-700 mb-2">Telefoon</label>
+                <input type="tel" id="phone" name="phone" class="w-full px-4 py-3 rounded-md border border-stone-300 focus:border-brick-500 focus:ring-2 focus:ring-brick-200 outline-none transition" />
+              </div>
+            </div>
+            <div>
+              <label for="message" class="block text-sm font-semibold text-stone-700 mb-2">Uw bericht</label>
+              <textarea id="message" name="message" rows="5" required class="w-full px-4 py-3 rounded-md border border-stone-300 focus:border-brick-500 focus:ring-2 focus:ring-brick-200 outline-none transition resize-none"></textarea>
+            </div>
+            <button type="submit" class="w-full bg-brick-500 hover:bg-brick-600 text-white font-semibold py-4 rounded-md transition">
+              Verstuur bericht
+            </button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer class="bg-stone-900 text-stone-400 py-12">
+    <div class="max-w-7xl mx-auto px-6 grid md:grid-cols-3 gap-8 items-start">
+      <div>
+        <div class="font-display text-2xl font-bold text-white mb-2">Daalman Metselwerken</div>
+        <p class="text-sm leading-relaxed">Vakwerk uit Hillegom — voor particulieren en bedrijven in de Bollenstreek.</p>
+      </div>
+      <div class="text-sm">
+        <div class="font-semibold text-white mb-3">Contact</div>
+        <div>Pieter van Eyckheem 51</div>
+        <div>2182 ZV Hillegom</div>
+        <div class="mt-2"><a href="tel:+31620206038" class="hover:text-white transition">06 20 20 60 38</a></div>
+      </div>
+      <div class="text-sm">
+        <div class="font-semibold text-white mb-3">Snel naar</div>
+        <ul class="space-y-1">
+          <li><a href="#diensten" class="hover:text-white transition">Diensten</a></li>
+          <li><a href="#werkwijze" class="hover:text-white transition">Werkwijze</a></li>
+          <li><a href="#werkgebied" class="hover:text-white transition">Werkgebied</a></li>
+          <li><a href="#contact" class="hover:text-white transition">Contact</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="max-w-7xl mx-auto px-6 pt-8 mt-8 border-t border-stone-800 text-xs text-stone-500 flex flex-col md:flex-row justify-between gap-2">
+      <div>&copy; 2026 Daalman Metselwerken. Alle rechten voorbehouden.</div>
+      <div>Website door <a href="https://baretta.nl" class="hover:text-white transition">Baretta</a></div>
+    </div>
+  </footer>
+
+  <script>
+    const toggle = document.getElementById('menu-toggle');
+    const menu = document.getElementById('mobile-menu');
+    toggle?.addEventListener('click', () => menu.classList.toggle('hidden'));
+    document.querySelectorAll('#mobile-menu a').forEach(a => a.addEventListener('click', () => menu.classList.add('hidden')));
+  </script>
+
 </body>
 </html>
